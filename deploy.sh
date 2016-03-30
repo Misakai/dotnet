@@ -17,13 +17,13 @@ rm -rf /app/*
 git clone "${APP_REPO}" "/app"
 cd /app
 
+# restore the packages and generate project.lock.json files
+dotnet restore
+
 # go to the application path, if one is specified
 if [[ $APP_PATH ]]; then
 	cd $APP_PATH
 fi
-
-# restore the packages
-dotnet restore
 
 # start the application
 dotnet run
