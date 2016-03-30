@@ -11,8 +11,7 @@ if [[ -z "${APP_REPO}" ]]; then
 fi
 
 # clean-up the app folder first
-rm -rf /app
-mkdir /app
+rm -rf /app/*
 cd /app
 
 # do the git clone
