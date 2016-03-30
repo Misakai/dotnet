@@ -9,4 +9,6 @@ RUN apt-get update -qq \
 WORKDIR /app
 ADD deploy.sh /
 
+# The volume for faster deploy
+VOLUME /app
 CMD ["/bin/bash", "/deploy.sh"]
