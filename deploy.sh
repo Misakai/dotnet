@@ -11,11 +11,12 @@ if [[ -z "${APP_REPO}" ]]; then
 fi
 
 # clean-up the app folder first
-rm -rf /app/*
+rm -rf /app
+mkdir /app
+cd /app
 
 # do the git clone
 git clone "${APP_REPO}" "/app"
-cd /app
 
 # restore the packages and generate project.lock.json files
 dotnet restore -v Minimal
