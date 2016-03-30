@@ -18,7 +18,7 @@ git clone "${APP_REPO}" "/app"
 cd /app
 
 # restore the packages and generate project.lock.json files
-dotnet restore
+dotnet restore -v Minimal
 
 # go to the application path, if one is specified
 if [[ $APP_PATH ]]; then
@@ -26,4 +26,4 @@ if [[ $APP_PATH ]]; then
 fi
 
 # start the application
-dotnet run
+dotnet run -c Release
