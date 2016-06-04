@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:latest
+FROM microsoft/dotnet:1.0.0-preview1
 MAINTAINER Roman Atachiants "roman@misakai.com"
 
 # Make sure we have S3 & additional libraries
